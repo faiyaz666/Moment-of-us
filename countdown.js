@@ -15,17 +15,16 @@ function dateAgo(date) {
     hours = hours - 12;
   }
 
-  hours = hours < 10 ? "0" + hours : hours;
-  minutes = minutes < 10 ? "0" + minutes : minutes;
-  seconds = seconds < 10 ? "0" + seconds : seconds;
+  hours = hours < 10 ? '0' + hours : hours;
+  minutes = minutes < 10 ? '0' + minutes : minutes;
+  seconds = seconds < 10 ? '0' + seconds : seconds;
 
-  document.querySelector("#Years").innerText = Y;
-  document.querySelector("#Months").innerText = M;
-  document.querySelector("#Days").innerText = D;
-  document.querySelector("#Hours").innerText = hours;
-  document.querySelector("#Minutes").innerText = minutes;
-  document.querySelector("#Seconds").innerText = seconds;
-
-  setInterval(dateAgo, 1000);
+  document.querySelector('#Years').innerText = Y;
+  document.querySelector('#Months').innerText = M;
+  document.querySelector('#Days').innerText = D;
+  document.querySelector('#Hours').innerText = hours;
+  document.querySelector('#Minutes').innerText = minutes;
+  document.querySelector('#Seconds').innerText = seconds;
 }
-dateAgo("2016-05-16");
+
+setInterval(() => dateAgo('2016-05-16'), 1000);
